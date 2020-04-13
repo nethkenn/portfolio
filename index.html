@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>John Kenneth Delara - Portfolio</title>
 	<!--META TAGS-->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -17,6 +17,10 @@
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico"/>
 </head>
 <body>
+
+    <div class="loader">
+        <h1>J&lt;D</h1>
+    </div>
 
     <nav class="navbar sticky-top navbar-expand-lg">
       <!--NAVBAR BRAND-->
@@ -274,23 +278,30 @@
     <!--AOS JS-->
     <script src="js/aos.js"></script>
     <script type="text/javascript">
+      $(window).on('load', function(){ 
+        $(".loader").fadeOut();
+      });
+
         $(document).ready(function () {
             AOS.init();
+
             $(".hamburger").click(function() {
                 $(".hamburger").toggleClass("is-active");
             })
 
-            $( ".my-cube3" )
+            $( ".my-cube4" )
               .mouseover(function() {
                 $(".my-cube").css("animation-play-state", "paused");
                 $(".my-cube1").css("animation-play-state", "paused");
                 $(".my-cube2").css("animation-play-state", "paused");
+                $(".my-cube3").css("animation-play-state", "paused");
                 $(this).css("animation-play-state", "paused");
               })
               .mouseout(function() {
                 $(".my-cube").css("animation-play-state", "running");
                 $(".my-cube1").css("animation-play-state", "running");
                 $(".my-cube2").css("animation-play-state", "running");
+                $(".my-cube3").css("animation-play-state", "running");
                 $(this).css("animation-play-state", "running");
               });
         });
